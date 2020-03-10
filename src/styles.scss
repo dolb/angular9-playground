@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:40,700&display=swap');
+@import "~bootstrap";
+
+$primary: rgb(232, 92, 17);
+
+body {
+    margin: 0;
+    font-family: 'Lato';
+    font-size: 18px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: $primary;
+    
+}
+a.active {
+    background-color: #ffffff;
+}
+
+h1 {
+    margin-top: 2em;
+}

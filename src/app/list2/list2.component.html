@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>
+        Cryptos
+    </h1>
+    <div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><fa-icon [icon]="icon"></fa-icon></span>
+            </div>
+            <input type="text" class="form-control" (input)="bpFilter($event)" placeholder="Search by name or symbol">
+        </div>
+    </div>
+    
+    <div *ngIf="!loader && currencies; else loading">
+        <div class="box" *ngFor="let currency of currenciesFiltered">
+            <p class="name">{{ currency.name }}</p>
+            <p class="symbol">{{ currency.symbol }}</p>
+            <p class="cap">{{ currency.marketCap }} USD</p>
+            <img class="images" src="{{ currency.src }}" />
+        </div>
+    </div>
+    
+    <ng-template #loading>
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </ng-template>
+    
+</div>

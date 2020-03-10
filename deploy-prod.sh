@@ -1,0 +1,1 @@
+aws s3 cp ./dist/my-app s3://angulartest.lechjantar.pl --recursive --acl public-read

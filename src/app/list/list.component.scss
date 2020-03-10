@@ -1,0 +1,46 @@
+@import "~bootstrap";
+
+div.box {
+    background: rgb(238, 238, 238);
+    padding: 1em;
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 10px;
+    height: 200px;
+    display: inline-flex;
+    flex-direction: column;
+    @include media-breakpoint-down(md) {
+        width: 48%;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 98%;
+    }
+   
+
+    p {
+        margin: 0;
+    }
+
+    p.name {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    p.symbol {
+        text-transform: uppercase;
+        font-size: .9rem;
+        flex-grow: 1;
+    }
+
+    p.cap {
+        font-weight: bold;
+        font-size: .9rem;
+        flex-grow: 1;
+    }
+
+    img.images {
+        width: 48px;
+        height: 48px;
+    }
+}
